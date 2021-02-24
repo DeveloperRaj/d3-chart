@@ -1,6 +1,7 @@
 import "./App.css";
 import * as d3 from "d3";
 import React, { Component } from "react";
+import First from "./pages/First";
 
 class App extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+    console.log(dataset);
     const dataset = [12, 31, 22, 17, 25, 50, 29, 14, 9];
     const w = 600;
     const h = 400;
@@ -55,6 +57,7 @@ class App extends Component {
     return (
       <div ref="chart" style={styles.container}>
         <h1 style={{ textAlign: "center" }}>Hi, I'm the bar chart</h1>
+        <First />
       </div>
     );
   }
